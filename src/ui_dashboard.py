@@ -1,12 +1,7 @@
 """
-Streamlit Dashboard for SHL Assessment Recommender
+SHL Assessment Recommendation System
 
-Features:
-- Query input and top_k selector
-- Optional K/P ratio override
-- KPIs: result count, avg duration
-- Table of recommendations
-- Charts: Test type pie, duration histogram
+Professional assessment matching platform for talent acquisition.
 """
 
 from __future__ import annotations
@@ -24,7 +19,7 @@ import streamlit as st
 DEFAULT_API_BASE_URL = os.getenv("API_BASE_URL", "http://localhost:8000")
 
 st.set_page_config(
-    page_title="SHL Recommender Dashboard",
+    page_title="SHL Assessment Recommender",
     page_icon="📊",
     layout="wide",
 )
@@ -172,24 +167,20 @@ if recommendations:
             for t in rec.get("test_type", []):
                 test_types_all.append(str(t))
         if test_types_all:
-            pie_df = (
-                pd.Series(test_types_all, name="Test Type")
-                .value_counts()
-                .reset_index()
-                .rename(columns={"count": "Count", "index": "Test Type"})
-            )
+            pie_df = pd.Series(test_types_all, name="Test Type").value_counts().reset_index()
+            pie_df.columns = ["Test Type", "Count"]
             fig_pie = px.pie(pie_df, names="Test Type", values="Count", title="Test Type Distribution")
             c1.plotly_chart(fig_pie, use_container_width=True)
-    except Exception:
-        pass
+    except Exception as e:
+        c1.warning(f"Could not generate test type chart: {str(e)}")
 
     try:
         if durations:
             fig_hist = px.histogram(x=durations, nbins=10, title="Duration Distribution (min)")
             fig_hist.update_layout(xaxis_title="Minutes", yaxis_title="Count")
             c2.plotly_chart(fig_hist, use_container_width=True)
-    except Exception:
-        pass
+    except Exception as e:
+        c2.warning(f"Could not generate duration chart: {str(e)}")
 
 with st.expander("Show raw response", expanded=False):
     if raw:
