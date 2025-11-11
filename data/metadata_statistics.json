@@ -1,0 +1,163 @@
+{
+  "total_assessments": 506,
+  "unique_skills": 82,
+  "role_templates": 5,
+  "test_type_distribution": {
+    "Cognitive": 48,
+    "Personality": 166,
+    "Ability": 114,
+    "Behavioral": 139,
+    "Knowledge": 253,
+    "Situational": 76
+  },
+  "level_distribution": {
+    "mid": 25,
+    "entry": 109,
+    "graduate": 36,
+    "senior": 15,
+    "executive": 18
+  },
+  "duration_statistics": {
+    "mean": 20.635922330097088,
+    "median": 15.0,
+    "min": 2,
+    "max": 74,
+    "std": 15.434593313438773
+  },
+  "top_skills": [
+    {
+      "skill": "ai",
+      "count": 230
+    },
+    {
+      "skill": "management",
+      "count": 61
+    },
+    {
+      "skill": "sales",
+      "count": 59
+    },
+    {
+      "skill": "go",
+      "count": 40
+    },
+    {
+      "skill": "customer service",
+      "count": 38
+    },
+    {
+      "skill": "hr",
+      "count": 31
+    },
+    {
+      "skill": "engineering",
+      "count": 30
+    },
+    {
+      "skill": "planning",
+      "count": 28
+    },
+    {
+      "skill": "coaching",
+      "count": 28
+    },
+    {
+      "skill": "leadership",
+      "count": 27
+    },
+    {
+      "skill": "operations",
+      "count": 26
+    },
+    {
+      "skill": "business",
+      "count": 23
+    },
+    {
+      "skill": "organization",
+      "count": 17
+    },
+    {
+      "skill": "compliance",
+      "count": 17
+    },
+    {
+      "skill": "legal",
+      "count": 16
+    },
+    {
+      "skill": "regulatory",
+      "count": 15
+    },
+    {
+      "skill": "git",
+      "count": 14
+    },
+    {
+      "skill": "healthcare",
+      "count": 13
+    },
+    {
+      "skill": "manufacturing",
+      "count": 13
+    },
+    {
+      "skill": "communication",
+      "count": 12
+    }
+  ],
+  "top_role_categories": [
+    {
+      "category": "customer service",
+      "count": 114
+    },
+    {
+      "category": "project management",
+      "count": 84
+    },
+    {
+      "category": "data science",
+      "count": 75
+    },
+    {
+      "category": "software development",
+      "count": 62
+    },
+    {
+      "category": "sales",
+      "count": 59
+    },
+    {
+      "category": "business analysis",
+      "count": 39
+    },
+    {
+      "category": "hr",
+      "count": 31
+    },
+    {
+      "category": "engineering",
+      "count": 30
+    },
+    {
+      "category": "leadership",
+      "count": 27
+    },
+    {
+      "category": "operations",
+      "count": 26
+    },
+    {
+      "category": "administrative",
+      "count": 6
+    },
+    {
+      "category": "consulting",
+      "count": 1
+    },
+    {
+      "category": "marketing",
+      "count": 1
+    }
+  ]
+}
