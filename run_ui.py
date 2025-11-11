@@ -66,7 +66,7 @@ def parse_args() -> argparse.Namespace:
 if __name__ == "__main__":
     args = parse_args()
 
-    ui_file = Path(__file__).parent / "src" / "ui_app.py"
+    ui_file = Path(__file__).parent / "src" / "ui_dashboard.py"
     if not ui_file.exists():
         logger.error("UI file not found: %s", ui_file)
         sys.exit(1)
