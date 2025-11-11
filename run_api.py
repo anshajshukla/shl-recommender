@@ -47,7 +47,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--port",
         type=int,
-        default=int(os.getenv("API_PORT", "8000")),
+        default=int(os.getenv("PORT", os.getenv("API_PORT", "8000"))),
         help="Port to bind (default: %(default)s)",
     )
     parser.add_argument(

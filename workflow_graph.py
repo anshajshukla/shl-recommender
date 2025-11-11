@@ -38,6 +38,12 @@ def load_assessment_metadata() -> Dict:
     global _assessment_metadata
     if _assessment_metadata is None:
         metadata_path = Path(__file__).parent / "data" / "assessments_metadata.json"
+        if not metadata_path.exists():
+            raise FileNotFoundError(
+                f"Assessment metadata not found at {metadata_path}. "
+                "This file is required for the application to run. "
+                "Please ensure data/assessments_metadata.json is present."
+            )
         with open(metadata_path, 'r', encoding='utf-8') as f:
             metadata_list = json.load(f)
         

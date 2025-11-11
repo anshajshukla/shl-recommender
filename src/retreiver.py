@@ -109,12 +109,24 @@ class HybridRetriever:
         
         # Load BM25 index
         logger.info("Loading BM25 index")
+        if not os.path.exists(bm25_path):
+            raise FileNotFoundError(
+                f"BM25 index not found at {bm25_path}. "
+                "This file is required for the application to run. "
+                "Please ensure all required files are present in the outputs/ directory."
+            )
         with open(bm25_path, 'rb') as f:
             self.bm25 = pickle.load(f)
         logger.info("BM25 index loaded successfully")
         
         # Load assessments
         logger.info("Loading assessment database")
+        if not os.path.exists(assessments_path):
+            raise FileNotFoundError(
+                f"Assessments file not found at {assessments_path}. "
+                "This file is required for the application to run. "
+                "Please ensure all required files are present in the outputs/ directory."
+            )
         self.df = pd.read_csv(assessments_path)
         logger.info(f"Loaded {len(self.df)} assessments")
         

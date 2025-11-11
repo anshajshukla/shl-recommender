@@ -51,7 +51,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--port",
         type=int,
-        default=int(os.getenv("STREAMLIT_PORT", "8501")),
+        default=int(os.getenv("PORT", os.getenv("STREAMLIT_PORT", "8501"))),
         help="Port for Streamlit (default: %(default)s)",
     )
     parser.add_argument(
