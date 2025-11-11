@@ -6,7 +6,7 @@ services:
     region: oregon
     plan: free
     branch: main
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
     startCommand: python run_api.py
     envVars:
       - key: PYTHON_VERSION
@@ -26,7 +26,7 @@ services:
     region: oregon
     plan: free
     branch: main
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install --upgrade pip && pip install -r requirements-ui.txt
     startCommand: python run_ui.py
     envVars:
       - key: PYTHON_VERSION

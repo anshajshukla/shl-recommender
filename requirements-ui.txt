@@ -1,0 +1,12 @@
+# Streamlit UI - Minimal Dependencies Only
+# No need for backend ML/AI libraries
+
+# Web Framework
+streamlit>=1.28.0
+requests>=2.31.0
+plotly>=5.18.0
+
+# Utilities
+python-dotenv>=1.0.0
+pandas>=2.0.0  # Only for dataframes in dashboard
+
