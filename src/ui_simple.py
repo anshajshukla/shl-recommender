@@ -16,7 +16,7 @@ import os
 API_BASE_URL = os.getenv("API_BASE_URL", "http://localhost:8000")
 
 st.set_page_config(
-    page_title="SHL Recommender",
+    page_title="SHL Assessment Matcher",
     page_icon="🎯",
     layout="wide",
     initial_sidebar_state="collapsed"
@@ -452,7 +452,7 @@ def main():
     # Header
     st.markdown("""
     <div class="header-section">
-        <div class="header-title">SHL Assessment Recommender</div>
+        <div class="header-title">SHL Assessment Matcher</div>
         <p class="header-subtitle">Professional Talent Assessment Matching Platform</p>
     </div>
     """, unsafe_allow_html=True)
@@ -688,7 +688,7 @@ def main():
     # Footer
     st.markdown("""
     <div class="footer">
-        <p><strong>SHL Assessment Recommender</strong> | Enterprise AI Matching Platform</p>
+        <p><strong>SHL Assessment Matcher</strong> | Enterprise AI Matching Platform</p>
         <p style="font-size: 0.8rem; margin-top: 0.5rem;">FastAPI • Streamlit • Google Gemini • LangGraph</p>
     </div>
     """, unsafe_allow_html=True)
