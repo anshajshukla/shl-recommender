@@ -338,6 +338,58 @@ st.markdown("""
         box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3) !important;
     }
     
+    /* Expander styling */
+    .streamlit-expanderHeader {
+        font-weight: 650 !important;
+        font-size: 1.05rem !important;
+        color: #2c3e50 !important;
+        letter-spacing: 0.2px;
+    }
+    
+    .streamlit-expanderContent {
+        background: #ffffff;
+        border-radius: 10px;
+        padding-top: 0.5rem;
+    }
+    
+    div[data-testid="stExpander"] * {
+        color: #121417 !important;
+        font-weight: 500 !important;
+    }
+    
+    div[data-testid="stExpander"] div[data-testid="stSliderLabel"] label,
+    div[data-testid="stExpander"] div[data-testid="stSliderMinValue"],
+    div[data-testid="stExpander"] div[data-testid="stSliderMaxValue"],
+    div[data-testid="stExpander"] div[data-testid="stTickValue"],
+    div[data-testid="stExpander"] div[data-testid="stSliderValue"] {
+        color: #121417 !important;
+        font-weight: 600 !important;
+    }
+    
+    div[data-testid="stExpander"] [data-baseweb="slider"] [role="slider"],
+    div[data-testid="stExpander"] .stSlider,
+    div[data-testid="stExpander"] .stSlider * {
+        color: #121417 !important;
+        fill: #121417 !important;
+    }
+    
+    div[data-testid="stExpander"] .stSlider .css-16huue1,
+    div[data-testid="stExpander"] .stSlider .css-1k0ckh2,
+    div[data-testid="stExpander"] .stSlider .css-1dp5vir {
+        background: rgba(18, 20, 23, 0.08) !important;
+        border-radius: 8px !important;
+    }
+    
+    div[data-testid="stExpander"] .stSlider .css-1k0ckh2 span,
+    div[data-testid="stExpander"] .stSlider .css-16huue1 span {
+        color: #121417 !important;
+    }
+    
+    div[data-testid="stExpander"] .stSlider .css-1k0ckh2 div {
+        color: #121417 !important;
+    }
+    
+    
     /* Links */
     a {
         color: #3498db !important;
