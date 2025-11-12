@@ -27,7 +27,7 @@ services:
     plan: free
     branch: main
     buildCommand: pip install --upgrade pip && pip install -r requirements.txt
-    startCommand: streamlit run src/ui_simple.py --server.port=$PORT --server.address=0.0.0.0 --server.headless=true
+    startCommand: python run_ui.py --host 0.0.0.0 --port $PORT --headless
     envVars:
       - key: PYTHON_VERSION
         value: 3.12.0

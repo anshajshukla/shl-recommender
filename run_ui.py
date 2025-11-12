@@ -66,7 +66,7 @@ def parse_args() -> argparse.Namespace:
 if __name__ == "__main__":
     args = parse_args()
 
-    ui_file = Path(__file__).parent / "src" / "ui_dashboard.py"
+    ui_file = Path(__file__).parent / "src" / "ui_simple.py"
     if not ui_file.exists():
         logger.error("UI file not found: %s", ui_file)
         sys.exit(1)
@@ -95,7 +95,7 @@ if __name__ == "__main__":
                 str(ui_file),
                 "--server.port", str(args.port),
                 "--server.address", args.host,
-                "--server.headless", "true",
+                "--server.headless", "true" if args.headless else "false",
                 "--server.enableCORS", "false",
                 "--server.enableXsrfProtection", "false",
             ],
